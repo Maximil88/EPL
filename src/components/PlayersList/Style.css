@@ -1,0 +1,14 @@
+ul .results {
+  background-color: #ddd;
+  margin-top: 40px;
+  padding: 26px 0;
+  }
+  
+ ul .results li{
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  
+  ul .results h2 {
+    text-decoration: underline;
+  }

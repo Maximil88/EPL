@@ -1,0 +1,41 @@
+/* form {
+  margin-top: 40px auto 0 auto;
+  max-width: 300px;
+}
+
+.form .form__field {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0;
+} */
+
+.matchlist {
+  padding-bottom: 40px;
+}
+
+Button {
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 4px 16px;
+  transition: all 400ms ease-in-out;
+}
+
+Button:hover {
+  background-color: darkgray;
+  color: white;
+}
+
+/* .results {
+background-color: #ddd;
+margin-top: 40px;
+padding: 26px 0;
+}
+
+.results li{
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.results h2 {
+  text-decoration: underline;
+} */
