@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 
-export default function MatchesList() {
+export default function MatchesList(props) {
 
-  const [matchData, setMatchData] = useState(null)
+  const [matchData, setMatchData] = useState('')
 
 
   const params=useParams()
@@ -16,7 +16,8 @@ export default function MatchesList() {
       }
     })
     .then(result => result.json())
-      .then(data => setMatchData(data))
+      .then(data => {console.log(data)
+      setMatchData(data)})
   },[params])
   
   if(!matchData){

@@ -11,8 +11,10 @@ export default function TeamCard(props) {
         <Card.Body>
           <Card.Title>{props.team.name}</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
+            {props.team.shortName} was founded in {props.team.founded}. The club colors
+            are {props.team.clubColors} and it's venue is {props.team.venue}. To get more info on <thead>
+            teams history visit {props.team.website}.
+            </thead>
           </Card.Text>
           <Button variant="primary" as={Link} to={`./${props.team.id}`}>Team Page</Button>
         </Card.Body>
