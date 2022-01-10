@@ -13,7 +13,7 @@ export default function TeamCard(props) {
           <Card.Text>
             {props.team.shortName} was founded in {props.team.founded}. The club colors
             are {props.team.clubColors} and it's venue is {props.team.venue}. To get more info on <thead>
-            teams history visit {props.team.website}.
+            team's history visit {props.team.website}.
             </thead>
           </Card.Text>
           <Button variant="primary" as={Link} to={`./${props.team.id}`}>Team Page</Button>

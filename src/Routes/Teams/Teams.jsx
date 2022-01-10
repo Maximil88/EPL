@@ -5,6 +5,7 @@ import TeamCard from '../../components/TeamCard/TeamCard';
 import { fetchTeams } from '../../Redux/Actions/action';
 
 
+
 function Teams ({fetchTeams, data}) {
 
   const [fieldData, setFieldData] = useState({
@@ -39,12 +40,10 @@ function Teams ({fetchTeams, data}) {
       <div>
         <label htmlFor="year">Search by Season</label>
         <input id="year" onChange={handleChange} type="text" />
+        <button type="submit" >Submit</button>
       </div>
-      {/* <div>
-        <label htmlFor="team">Team</label>
-        <input id="team" onChange={handleChange} type="text" />
-      </div> */}
-      <button type="submit" >Submit</button>
+  
+      
     </form>
     <Row>
     {data && (

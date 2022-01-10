@@ -5,6 +5,7 @@ import { ButtonGroup, Button } from 'react-bootstrap'
 import { Link, Route, Routes, useParams } from 'react-router-dom'
 import MatchesList from '../../components/MatchesList/MatchesList';
 import PlayersList from '../../components/PlayersList/PlayersList';
+import './Style.css';
 
 export default function Team(props) {
 const [teamData, setTeamData] = useState(null)
