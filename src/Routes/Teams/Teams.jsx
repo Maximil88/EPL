@@ -3,6 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import TeamCard from '../../components/TeamCard/TeamCard';
 import { fetchTeams } from '../../Redux/Actions/action';
+import './Style.css';
 
 
 
@@ -35,9 +36,9 @@ function Teams ({fetchTeams, data}) {
   }
 
   return (
-    <div>
-    <form onSubmit={handleSubmit}>
-      <div>
+    <div className='background'>
+    <form  onSubmit={handleSubmit}>
+      <div className='search'>
         <label htmlFor="year">Search by Season</label>
         <input id="year" onChange={handleChange} type="text" />
         <button type="submit" >Submit</button>

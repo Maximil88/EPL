@@ -1,4 +1,14 @@
-img {
-  height: 400px;
-  width: 600px;
+.test {
+margin-top: -80px;
+height:100vh;
+background-image: url('../../components/logo/pll.jpeg');
+/* background-image: no-repeat; */
+/* background-attachment: fixed; */
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+h1{
+  padding-top: 100px;
 }

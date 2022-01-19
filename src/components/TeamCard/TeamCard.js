@@ -1,13 +1,17 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Style.css';
+
 
 
 export default function TeamCard(props) {
   return (
     <div>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={props.team.crestUrl} />
+      <Card border="dark" style={{ width: '18rem', marginBottom:'20px' }}>
+        <div className='cardImgContainer'>
+          <Card.Img variant="top" src={props.team.crestUrl} />
+        </div>
         <Card.Body>
           <Card.Title>{props.team.name}</Card.Title>
           <Card.Text>

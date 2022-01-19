@@ -1,12 +1,14 @@
 import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+// import Modal from '../../modal/modal';
+import './Style.css';
 
 export default function MatchesList() {
 
-  const [matchData, setMatchData] = useState(null)
-  const [matchDetail, setMatchDetail] = useState(null)
+  const [matchList, setMatchList] = useState(null)
+  const [matchDetail, setMatchDetail] = useState('')
 
   const handleClick = (e) => {
     const matchId = e.target.getAttribute('data-match-id');
@@ -31,28 +33,33 @@ export default function MatchesList() {
         .then(result => result.json())
         .then(data => {
           console.log(data)
-          setMatchData(data)
+          setMatchList(data)
         })
     }, [])
 
-    if (!matchData) {
+    if (!matchList) {
       return null
     }
+
+  //   const closeModal = () => {
+  //     setMatchDetail(null);
+  // }
+
+
 
     return (
       <>
         <ul className="results" onClick={handleClick}>
-          {matchData.matches.map((match, index) => (
+          {matchList.matches.map((match, index) => (
             <li key={index}>
-              <h4 data-match-id={match.id}>{match.awayTeam.name} vs {match.homeTeam.name}</h4>
+              <h4 data-match-id={match.id}>{match.homeTeam.name} vs {match.awayTeam.name}</h4>
             </li>
           ))}
         </ul>
         <ul className="matchInfo">
           <li>score: {matchDetail && matchDetail.match.score.fullTime.homeTeam} - {matchDetail && matchDetail.match.score.fullTime.awayTeam}</li>
-          {/* <li>Birth Date: {matchData.dateOfBirth}</li>
-          <li>Nationality: {matchData.nationality}</li>
-          <li>Position: {matchData.position} </li> */}
+          <li>Venue: {matchDetail.match.venue}</li>
+          <li>Date: {matchDetail.match.utcDate}</li>
         </ul>
       </>
     )
