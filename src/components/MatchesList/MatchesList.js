@@ -35,7 +35,7 @@ export default function MatchesList() {
           console.log(data)
           setMatchList(data)
         })
-    }, [])
+    }, [params.id])
 
     if (!matchList) {
       return null
