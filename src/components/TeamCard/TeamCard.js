@@ -8,7 +8,7 @@ import './Style.css';
 export default function TeamCard(props) {
   return (
     <div>
-      <Card border="dark" style={{ width: '18rem', marginBottom:'20px' }}>
+      <Card border="dark" style={{ width: '18rem', marginBottom:'60px' }}>
         <div className='cardImgContainer'>
           <Card.Img variant="top" src={props.team.crestUrl} />
         </div>
