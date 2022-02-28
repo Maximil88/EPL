@@ -13,7 +13,7 @@ const [teamData, setTeamData] = useState(null)
 
 const params=useParams()
 useEffect(() => {
-  fetch(`http://api.football-data.org/v2/teams/${params.id}`,{
+  fetch(`https://api.football-data.org/v2/teams/${params.id}`,{
     headers: {
       "X-Auth-Token": "f51730bb99764e75a62bf28d78002060"
     }

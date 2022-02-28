@@ -10,7 +10,7 @@ export default function PlayersList(props) {
 
   const handleClick = (e) => {
     const playerId = e.target.getAttribute('data-playerid');
-        fetch(`http://api.football-data.org/v2/players/${playerId}`,{
+        fetch(`https://api.football-data.org/v2/players/${playerId}`,{
         headers: {
           "X-Auth-Token": "f51730bb99764e75a62bf28d78002060"
         }

@@ -12,7 +12,7 @@ export default function MatchesList() {
 
   const handleClick = (e) => {
     const matchId = e.target.getAttribute('data-match-id');
-    fetch(`http://api.football-data.org/v2/matches/${matchId}`, {
+    fetch(`https://api.football-data.org/v2/matches/${matchId}`, {
       headers: {
         "X-Auth-Token": "f51730bb99764e75a62bf28d78002060"
       }
@@ -25,7 +25,7 @@ export default function MatchesList() {
   }
     const params = useParams()
     useEffect(() => {
-      fetch(`http://api.football-data.org/v2/teams/${params.id}/matches`, {
+      fetch(`https://api.football-data.org/v2/teams/${params.id}/matches`, {
         headers: {
           "X-Auth-Token": "f51730bb99764e75a62bf28d78002060"
         }

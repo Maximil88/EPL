@@ -2,7 +2,7 @@ import * as types from '../ActionTypes';
 
 export const fetchTeams = (year) => dispatch => {
   console.log(year)
-  fetch(`http://api.football-data.org/v2/competitions/2021/teams?season=${year}`, {
+  fetch(`https://api.football-data.org/v2/competitions/2021/teams?season=${year}`, {
     headers: {
       "X-Auth-Token": "f51730bb99764e75a62bf28d78002060"
     }
